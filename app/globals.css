@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --plum: #1b1224;
+  --wine: #2a1630;
+  --cream: #fbf6f0;
+  --ink: #1f1a17;
+  --muted: #5c534c;
+  --magenta: #e23b8c;
+  --orange: #f07a3a;
+  --gold: #e8b84a;
+  --teal: #2bb7b0;
+  --live: #e23b3b;
+}
+
+@theme inline {
+  --color-plum: var(--plum);
+  --color-wine: var(--wine);
+  --color-cream: var(--cream);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-magenta: var(--magenta);
+  --color-orange: var(--orange);
+  --color-gold: var(--gold);
+  --color-teal: var(--teal);
+  --color-live: var(--live);
+  --font-sans: var(--font-outfit);
+  --font-display: var(--font-nunito);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-outfit), system-ui, sans-serif;
+}
+
+.wordmark {
+  font-family: var(--font-nunito), var(--font-outfit), sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  background: linear-gradient(
+    90deg,
+    #e23b8c 0%,
+    #f07a3a 32%,
+    #e8b84a 58%,
+    #2bb7b0 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.tag-gradient {
+  background: linear-gradient(90deg, #f3a0c8, #f0b06a, #7ad4cf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.sunburst {
+  background-color: #160e1c;
+  background-image:
+    radial-gradient(ellipse 80% 55% at 50% -10%, rgba(232, 184, 74, 0.28), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 80% 40%, rgba(226, 59, 140, 0.16), transparent 60%),
+    radial-gradient(ellipse 40% 40% at 15% 70%, rgba(43, 183, 176, 0.12), transparent 60%),
+    repeating-conic-gradient(
+      from 0deg at 50% 0%,
+      rgba(232, 184, 74, 0.09) 0deg 3deg,
+      transparent 3deg 8deg
+    );
+}
+
+.gold-btn {
+  background: linear-gradient(180deg, #f3d078 0%, #e8b84a 55%, #d4a230 100%);
+  color: #1b1224;
+  box-shadow: 0 10px 28px rgba(232, 184, 74, 0.28);
+}
+
+.gold-btn:hover {
+  filter: brightness(1.04);
+}
+
+.card-soft {
+  background: #fffdf9;
+  border: 1px solid rgba(31, 26, 23, 0.08);
+  box-shadow: 0 12px 40px rgba(27, 18, 36, 0.05);
+}
+
+.section-wrap {
+  width: min(1120px, calc(100% - 2rem));
+  margin-inline: auto;
+}
